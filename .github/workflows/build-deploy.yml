@@ -6,6 +6,12 @@ jobs:
     steps:
       - name: pull the repo
         uses: actions/checkout@v2
-      - name: hi there
-        run: echo "this is fine Foxy"
+      - name: Install python version 3.9
+        uses: actions/setup-python@v2
+          with:
+            python-version: '3.9'
+      - name: upgrade pip
+        run: python -m pip instlal --upgrade pip
+      - name: install all dependencies
+        run: pip install -r requirements.txt
 
