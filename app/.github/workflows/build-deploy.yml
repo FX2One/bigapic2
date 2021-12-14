@@ -1,0 +1,11 @@
+name: Build and Deploy Code
+on: [push, pull_request]
+jobs:
+  job_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull the repo
+        uses: actions/checkout@v2
+      - name: hi there
+        run: echo "this is fine Foxy"
+
